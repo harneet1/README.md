@@ -16,7 +16,7 @@ The folder consists of manifest.yml file
 
   To accept the license agreement [Microservices Gateway Pre-Release Agreement], set the value of "ACCEPT_LICENSE" to true. This variable is present in manifest.yml file and set "QUICKSTART_REST_MODE" to false. So it will be in Quickstart Startup Mode.
 
-- Starting Cloud Foundry will take around 5 to 6 minutes
+- Start Cloud Foundry (will take around 5 to 6 minutes)
 ```
 cf dev start
 ```
