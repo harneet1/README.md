@@ -1,5 +1,7 @@
 # Prerequisites
-Install PCF Dev on the machine.
+- VirtualBox 5.0 or higher
+- Install the CF CLI
+- Install PCF Dev
 
 # Deployment types
 The following deployments are currently supported
