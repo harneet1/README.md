@@ -78,4 +78,4 @@ If the Microgateway image doesn't have any service, it should return an empty se
 ```
 curl --insecure --user "admin:password" https://tcp.local.pcfdev.io:port/quickstart/1.0/services
 ```
-It should return the service that you bake in docker iamge.
+It should return the service that you bake in docker image.
