@@ -14,9 +14,9 @@ The folder consists of manifest.yml file
 ### Deploy
 - Accept the license
 
-  To accept the license agreement [Microservices Gateway Pre-Release Agreement], set the value of "ACCEPT_LICENSE" to true. This variable is present in manifest.yml file and set "QUICKSTART_REST_MODE" to false. So it will be in Quickstart Startup Mode.
+  To accept the license agreement [Microservices Gateway Pre-Release Agreement], set the value of "ACCEPT_LICENSE" to true. This variable is present in manifest.yml file.
 
-- Start Cloud Foundry (will take around 5 to 6 minutes)
+- Starting Cloud Foundry will take around 5 to 6 minutes
 ```
 cf dev start
 ```
@@ -38,14 +38,15 @@ cf create-space <space-name>
 ```
 cf target -o <org-name> -s <space-name>
 ```
+- cd to folder where manifest.yml file is present before pushing app to Cloud foundry
 ```
-cf push <app-name>
+cf push microgateway
 ```
 ```
 cf create-route <space-name> tcp.local.pcfdev.io --random-port
 ```
 ```
-cf map-route <app-name> tcp.local.pcfdev.io --port <port-number from previous step>
+cf map-route microgateway tcp.local.pcfdev.io --port <port-number from previous step>
 ```
 - To check status of app
 ```
@@ -61,3 +62,19 @@ Go to URL: https://apps.local.pcfdev.io
 Email> admin
 Password> admin
 ```
+
+- Once CA Microgateway is up and running, you can list the APIs that have been published to it, you can check the url from cf app command:
+```
+curl --insecure --user "admin:password" https://tcp.local.pcfdev.io:port/quickstart/1.0/services
+```
+
+If the Microgateway has just been started for the first time, it should return an empty set:
+```
+[]
+```
+
+- To publish a new service you can embed them into you custom docker image and creates new image that has your service . Change the name of docker image to your custom image name in manifest.yml file and push it again to Cloud foundry:
+```
+curl --insecure --user "admin:password" https://tcp.local.pcfdev.io:port/quickstart/1.0/services
+```
+It should return the service that you bake in docker iamge.
