@@ -45,8 +45,9 @@ cf push <app-name>
 cf create-route <space-name> tcp.local.pcfdev.io --random-port
 ```
 ```
-cf map-route <app-name> tcp.local.pcfdev.io --port <port-number>
+cf map-route <app-name> tcp.local.pcfdev.io --port <port-number from previous step>
 ```
+- To check status of app
 ```
 cf apps
 ```
