@@ -54,7 +54,7 @@ cf apps
 ```
 - To check logs
 ```
-cf logs <app-name> --recent
+cf logs microgateway --recent
 ```
 - To see dashboard
 ```
