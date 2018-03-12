@@ -20,12 +20,8 @@ cf dev start
 ```
 ```
 cf login -a api.local.pcfdev.io --skip-ssl-validation
-```
-```
 Email> admin
 Password> admin
-```
-```
 press enter to skip
 ```
 ```
