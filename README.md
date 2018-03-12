@@ -68,12 +68,13 @@ Password> admin
 curl --insecure --user "admin:password" https://tcp.local.pcfdev.io:port/quickstart/1.0/services
 ```
 
-If the Microgateway has just been started for the first time, it should return an empty set:
+If the Microgateway image doesn't have any service, it should return an empty set:
 ```
 []
 ```
 
-- To publish a new service you can embed them into you custom docker image and creates new image that has your service . Change the name of docker image to your custom image name in manifest.yml file and push it again to Cloud foundry:
+- To publish a new service you can embed them into you custom docker image and creates new image that has your service . Change the name of docker image to your custom image name in manifest.yml file and push it again to Cloud foundry. For embeding the service into docker image follow link: https://docops.ca.com/ca-microgateway/1-0/EN/working-with-the-ca-microgateway/create-your-own-microgateway-image
+
 ```
 curl --insecure --user "admin:password" https://tcp.local.pcfdev.io:port/quickstart/1.0/services
 ```
