@@ -25,11 +25,10 @@ cf dev start
 #### Login to PCFDev
 ```
 cf login -a api.local.pcfdev.io --skip-ssl-validation
-```
 Email> admin
 Password> admin
 press enter to skip
-
+```
 #### Create PCFDev 'org' and 'space' for hosting your application
 ```
 cf create-org <org-name>
