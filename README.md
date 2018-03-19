@@ -2,7 +2,7 @@
 - VirtualBox 5.0 or higher
 - Install the CF CLI
 - Install PCF Dev
-Reference for installing PCFDev: https://docs.pivotal.io/pcf-dev/
+- Reference for installing PCFDev: https://docs.pivotal.io/pcf-dev/
 
 # Deployment types
 The following deployments are currently supported
