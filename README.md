@@ -57,7 +57,7 @@ cf map-route microgateway tcp.local.pcfdev.io --port <port-number from previous 
 ```
 cf apps
 ```
-- To check logs
+#### To check logs
 ```
 cf logs microgateway --recent
 ```
@@ -67,17 +67,15 @@ Go to URL: https://apps.local.pcfdev.io
 Email> admin
 Password> admin
 ```
-
-- Once CA Microgateway is up and running, you can list the APIs that have been published to it, you can check the url from cf app command:
+#### Access QST endpoint from command line using curl:
 ```
 curl --insecure --user "admin:password" https://tcp.local.pcfdev.io:port/quickstart/1.0/services
 ```
-
-If the Microgateway image doesn't have any service, it should return an empty set:
+Since, Microgateway doesn't have any publish service at this time, it should return an empty set:
 ```
 []
 ```
-
+#### To publish a new service
 - To publish a new service you can embed them into your own custom docker image and creates new image that has your service . Change the name of docker image to name that you have given in manifest.yml file and push it again to Cloud foundry. For embeding the service into docker image follow link: https://docops.ca.com/ca-microgateway/1-0/EN/working-with-the-ca-microgateway/create-your-own-microgateway-image
 
 ```
