@@ -17,19 +17,19 @@ The folder consists of manifest.yml file
 
   To accept the license agreement [Microservices Gateway Pre-Release Agreement], set the value of "ACCEPT_LICENSE" to true. This variable is present in manifest.yml file.
 
-#### Start PCFDev
+#### Start PCFDev:
 - This will take around 5 to 6 minutes
 ```
 cf dev start
 ```
-#### Login to PCFDev
+#### Login to PCFDev:
 ```
 cf login -a api.local.pcfdev.io --skip-ssl-validation
 Email> admin
 Password> admin
 press enter to skip
 ```
-#### Create PCFDev 'org' and 'space' for hosting your application
+#### Create PCFDev 'org' and 'space' for hosting your application:
 ```
 cf create-org <org-name>
 ```
@@ -57,11 +57,11 @@ cf map-route microgateway tcp.local.pcfdev.io --port <port-number from previous 
 ```
 cf apps
 ```
-#### To check logs
+#### To check logs:
 ```
 cf logs microgateway --recent
 ```
-#### To see PCFDev application dashboard
+#### To see PCFDev application dashboard:
 ```
 Go to URL: https://apps.local.pcfdev.io
 Email> admin
@@ -75,7 +75,7 @@ Since, Microgateway doesn't have any publish service at this time, it should ret
 ```
 []
 ```
-#### To publish a new service
+#### To publish a new service:
 - To publish a new service you can embed them into your own custom docker image and creates new image that has your service . Change the name of docker image to name that you have given in manifest.yml file and push it again to Cloud foundry. For embeding the service into docker image follow link: https://docops.ca.com/ca-microgateway/1-0/EN/working-with-the-ca-microgateway/create-your-own-microgateway-image
 
 ```
