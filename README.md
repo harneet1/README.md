@@ -23,12 +23,14 @@ The folder consists of manifest.yml file
 cf dev start
 ```
 ```
+#### Login to PCFDev
 cf login -a api.local.pcfdev.io --skip-ssl-validation
 Email> admin
 Password> admin
 press enter to skip
 ```
 ```
+#### Create PCFDev 'org' and 'space' for hosting your application
 cf create-org <org-name>
 ```
 ```
@@ -40,6 +42,7 @@ cf create-space <space-name>
 ```
 cf target -o <org-name> -s <space-name>
 ```
+#### Push microgateway application to PCFDev and create a tcp-route to it:
 - cd to folder where manifest.yml file is present before pushing app to Cloud foundry
 ```
 cf push microgateway
@@ -50,7 +53,7 @@ cf create-route <space-name> tcp.local.pcfdev.io --random-port
 ```
 cf map-route microgateway tcp.local.pcfdev.io --port <port-number from previous step>
 ```
-- To check status of app
+#### To check status of pushed app in PFCDev:
 ```
 cf apps
 ```
@@ -58,7 +61,7 @@ cf apps
 ```
 cf logs microgateway --recent
 ```
-- To see dashboard
+#### To see PCFDev application dashboard
 ```
 Go to URL: https://apps.local.pcfdev.io
 Email> admin
