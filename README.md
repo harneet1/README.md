@@ -2,6 +2,7 @@
 - VirtualBox 5.0 or higher
 - Install the CF CLI
 - Install PCF Dev
+Reference for installing PCFDev: https://docs.pivotal.io/pcf-dev/
 
 # Deployment types
 The following deployments are currently supported
@@ -16,7 +17,8 @@ The folder consists of manifest.yml file
 
   To accept the license agreement [Microservices Gateway Pre-Release Agreement], set the value of "ACCEPT_LICENSE" to true. This variable is present in manifest.yml file.
 
-- Starting Cloud Foundry will take around 5 to 6 minutes
+#### Start PCFDev
+- This will take around 5 to 6 minutes
 ```
 cf dev start
 ```
