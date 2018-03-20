@@ -69,7 +69,7 @@ If microgateway is up and running it returns:
 ```
 OK
 ```
-#### To scale microgateway
+#### To scale microgateway:
 ```
 cf scale microgateway -i <No. of instances>
 ```
