@@ -53,7 +53,7 @@ cf create-route <space-name> tcp.local.pcfdev.io --random-port
 ```
 cf map-route microgateway tcp.local.pcfdev.io --port rport
 ```
-Where, rport is generated from previous step.
+- Where, rport is generated from previous step.
 #### To check status of pushed app in PFCDev:
 ```
 cf apps
@@ -73,6 +73,10 @@ OK
 #### To scale microgateway:
 ```
 cf scale microgateway -i <Number of instances>
+```
+#### To check instances is up and running
+```
+cf apps
 ```
 #### To see PCFDev application dashboard:
 ```
