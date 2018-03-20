@@ -61,6 +61,14 @@ cf apps
 ```
 cf logs microgateway --recent
 ```
+#### To perform healthcheck of microgateway:
+```
+curl --insecure --user "admin:password" https://tcp.local.pcfdev.io:port/sys/probe/healthcheck
+```
+If microgateway is up and running it returns:
+```
+OK
+```
 #### To see PCFDev application dashboard:
 ```
 Go to URL: https://apps.local.pcfdev.io
