@@ -51,7 +51,7 @@ cf push microgateway
 cf create-route <space-name> tcp.local.pcfdev.io --random-port
 ```
 ```
-cf map-route microgateway tcp.local.pcfdev.io --port <port-number from previous step>
+cf map-route microgateway tcp.local.pcfdev.io --port rport
 ```
 #### To check status of pushed app in PFCDev:
 ```
@@ -63,7 +63,7 @@ cf logs microgateway --recent
 ```
 #### To perform healthcheck of microgateway:
 ```
-curl --insecure --user "admin:password" https://tcp.local.pcfdev.io:port/sys/probe/healthcheck
+curl --insecure --user "admin:password" https://tcp.local.pcfdev.io:rport/sys/probe/healthcheck
 ```
 If microgateway is up and running it returns:
 ```
@@ -81,7 +81,7 @@ Password> admin
 ```
 #### Access QST endpoint from command line using curl:
 ```
-curl --insecure --user "admin:password" https://tcp.local.pcfdev.io:port/quickstart/1.0/services
+curl --insecure --user "admin:password" https://tcp.local.pcfdev.io:rport/quickstart/1.0/services
 ```
 Since, Microgateway doesn't have any publish service at this time, it should return an empty set:
 ```
@@ -91,6 +91,6 @@ Since, Microgateway doesn't have any publish service at this time, it should ret
 - To publish a new service you can embed them into your own custom docker image and creates new image that has your service . Change the name of docker image to name that you have given in manifest.yml file and push it again to Cloud foundry. For embeding the service into docker image follow link: https://docops.ca.com/ca-microgateway/1-0/EN/working-with-the-ca-microgateway/create-your-own-microgateway-image
 
 ```
-curl --insecure --user "admin:password" https://tcp.local.pcfdev.io:port/quickstart/1.0/services
+curl --insecure --user "admin:password" https://tcp.local.pcfdev.io:rport/quickstart/1.0/services
 ```
 It should return the service that you bake in docker image.
