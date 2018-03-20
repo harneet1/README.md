@@ -74,7 +74,7 @@ OK
 ```
 cf scale microgateway -i <Number of instances>
 ```
-#### To check instances is up and running
+#### To check instances is up and running:
 ```
 cf apps
 ```
