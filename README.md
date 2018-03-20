@@ -71,7 +71,7 @@ OK
 ```
 #### To scale microgateway:
 ```
-cf scale microgateway -i <No. of instances>
+cf scale microgateway -i <Number of instances>
 ```
 #### To see PCFDev application dashboard:
 ```
