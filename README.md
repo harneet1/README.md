@@ -5,17 +5,16 @@
 - Reference for installing PCFDev: https://docs.pivotal.io/pcf-dev/
 
 # Deployment types
-The following deployments are currently supported
-	1) MSGW (Quickstart Startup Mode)
+The following deployment is currently supported:<br/>
+- MSGW (Quickstart Startup Mode)
 
 ### Configure variables:
-The folder consists of manifest.yml file
-	1) manifest.yml file consist of docker image and all environment variable that are required to deploy microgateway 
+The folder contains manifest.yml file that consists of docker image and all environment variables that are required to deploy microgateway 
 
 ### Deploy
 - Accept the license
 
-  To accept the license agreement [Microservices Gateway Pre-Release Agreement], set the value of "ACCEPT_LICENSE" to true. This variable is present in manifest.yml file.
+  To accept the license agreement [Microservices Gateway Pre-Release Agreement], set "ACCEPT_LICENSE" to true. This variable is present in manifest.yml file.
 
 #### Start PCFDev:
 - This will take around 5 to 6 minutes
@@ -66,7 +65,7 @@ cf logs microgateway --recent
 ```
 curl --insecure --user "admin:password" https://tcp.local.pcfdev.io:rport/sys/probe/healthcheck
 ```
-If microgateway is up and running it returns:
+If microgateway is up and running, it returns:
 ```
 OK
 ```
@@ -88,12 +87,12 @@ Password> admin
 ```
 curl --insecure --user "admin:password" https://tcp.local.pcfdev.io:rport/quickstart/1.0/services
 ```
-Since, Microgateway doesn't have any publish service at this time, it should return an empty set:
+Since Microgateway doesn't have any publish service at this time, it should return an empty set:
 ```
 []
 ```
 #### To publish a new service:
-- To publish a new service you can embed them into your own custom docker image and creates new image that has your service . Change the name of docker image to name that you have given in manifest.yml file and push it again to Cloud foundry. For embeding the service into docker image follow link: https://docops.ca.com/ca-microgateway/1-0/EN/working-with-the-ca-microgateway/create-your-own-microgateway-image
+- To publish a new service, you can embed them into your own custom docker image and create a new image that has your service . Change the name of the docker image to name that you have given in manifest.yml file and push it again to Cloud foundry. For embeding the service into docker image, follow the link: https://docops.ca.com/ca-microgateway/1-0/EN/working-with-the-ca-microgateway/create-your-own-microgateway-image
 
 ```
 curl --insecure --user "admin:password" https://tcp.local.pcfdev.io:rport/quickstart/1.0/services
